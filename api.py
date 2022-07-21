@@ -3,6 +3,11 @@ from faker import Faker
 
 app = FastAPI()
 
+@app.get("/")
+def welcome():
+    """ Rota default """
+    return [{"message": "Welcome!"}]
+
 @app.get("/users")
 def users_list():
     """ Lista de usuarios fake """
